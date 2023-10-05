@@ -1,8 +1,9 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { memo } from "react";
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+const App = ({ Component, pageProps }: AppProps) => (
+  <Component {...pageProps} />
+);
 
-export default MyApp
+export default memo(App);

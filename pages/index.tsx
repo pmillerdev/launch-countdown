@@ -17,24 +17,24 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     const updateTime = setInterval(() => {
-      const now: number = new Date().getTime();
-      const difference: number = countDownDate - now;
+      const now = new Date().getTime();
+      const difference = countDownDate - now;
 
-      const newDays: number = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const newHours: number = Math.floor(
+      const newDays = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const newHours = Math.floor(
         (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
-      const newMinutes: number = Math.floor(
+      const newMinutes = Math.floor(
         (difference % (1000 * 60 * 60)) / (1000 * 60)
       );
-      const newSeconds: number = Math.floor((difference % (1000 * 60)) / 1000);
+      const newSeconds = Math.floor((difference % (1000 * 60)) / 1000);
 
       setDays(newDays);
       setHours(newHours);
       setMinutes(newMinutes);
       setSeconds(newSeconds);
 
-      const displayMessage: string =
+      const displayMessage =
         newMinutes <= 10 ? "We're Launching Soon!" : "Time Until Launch";
       setMessage(displayMessage);
 
@@ -53,9 +53,9 @@ const Home: NextPage = () => {
     };
   }, [time]);
 
-  const timeToDays: number = time * 60 * 60 * 24 * 1000;
+  const timeToDays = time * 60 * 60 * 24 * 1000;
 
-  const countDownDate: number = new Date().getTime() + timeToDays;
+  const countDownDate = new Date().getTime() + timeToDays;
 
   const handleClick = (): void => {
     setTime(newTime);
