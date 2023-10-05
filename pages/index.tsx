@@ -57,13 +57,13 @@ const Home: NextPage = () => {
 
   const countDownDate = new Date().getTime() + timeToDays;
 
-  const handleClick = (): void => {
+  const handleClick = () => {
     setTime(newTime);
     setNewTime(0);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const inputTime: number = Number(e.target.value);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const inputTime = Number(e.target.value);
     setNewTime(inputTime);
   };
 

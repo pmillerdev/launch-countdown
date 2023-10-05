@@ -3,7 +3,7 @@ import React, { memo } from "react";
 type TimerInputProps = {
   value: number;
   handleClick: () => void;
-  handleChange(e: React.ChangeEvent<HTMLInputElement>): void;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 const TimerInput = ({
